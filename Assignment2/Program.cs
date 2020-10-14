@@ -11,17 +11,22 @@ namespace Assignment2
         static void Main(string[] args)
         {
             
-           var dataOperation2 = new DataOperation<House>();
+           var dataOperation = new DataOperation<House>();
 
-            var room = new Room { Rent = 4000 };
+            var room = new Room { Rent = 5500 };
           
             var house = new House
             {
                 Name = "Yellow House",
                 Rooms = new List<Room> { room }
             };
-         
-           dataOperation2.Insert(house);
+
+            //dataOperation.Insert(house);
+            //dataOperation.GetAll();
+            dataOperation.GetById(5);
+
+
+
     
         }
     }

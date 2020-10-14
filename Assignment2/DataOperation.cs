@@ -9,9 +9,10 @@ namespace Assignment2
 {
     public class DataOperation<T> where T : class
     {
+        
         public void Insert(T item)
         {
-            ModifyTable modify = new ModifyTable();
+            DataServer modify = new DataServer();
             int Houseid=0;
             var type = typeof(T);
 
@@ -66,5 +67,26 @@ namespace Assignment2
             modify.DatabaseGateway2(sql3.ToString());
           
         }
-    }   
+
+        public void Update(T item)
+        {
+
+        }
+
+
+        public void GetAll()
+        {
+            var GetAllSql = "Select * from Room";
+            DataServer obj = new DataServer();
+            obj.ReadFromTable(GetAllSql);
+        }
+
+        public void GetById(int id)
+        {
+            var GetIdSq = new StringBuilder("Select * from Room where Id=").Append(id).ToString();
+
+            DataServer obj = new DataServer();
+            obj.ReadFromTable(GetIdSq);
+        }
+    }
 }
