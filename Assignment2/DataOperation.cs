@@ -59,26 +59,69 @@ namespace Assignment2
                     }
                 }
             }
-
-            //Console.WriteLine(sql.ToString());
-            //Console.WriteLine(sql2.ToString());
-            //Console.WriteLine(sql3.ToString());
-           
-            modify.DatabaseGateway2(sql3.ToString());
-          
+            modify.DatabaseGateway2(sql3.ToString());          
         }
 
         public void Update(T item)
         {
+            var type = typeof(T);
+            var UpSql = new StringBuilder("UPDATE Room SET Rent = ");//12000 WHERE Country = 'Mexico'); 
 
+            foreach (var prop in item.GetType().GetProperties())
+            {
+                if (prop.PropertyType.IsGenericType)
+                {
+                    Type t = item.GetType();
+
+                    var props = t.GetProperties().Where(x => x.PropertyType.IsGenericType);
+
+                    foreach (var propt in props)
+                    {
+                        var list = (IList)propt.GetValue(item);
+
+                        foreach (var value in list)
+                        {
+                            UpSql.Append(value.GetType().GetProperty("Rent").GetValue(value));
+                            UpSql.Append(" Where Id = ");
+                            UpSql.Append(value.GetType().GetProperty("Id").GetValue(value));                      
+                        }
+                    }
+                }
+            }
+           
+            DataServer dataServer = new DataServer();
+            dataServer.DatabaseGateway2(UpSql.ToString());
         }
 
 
-        public void GetAll()
+        public void Delete(T item)
         {
-            var GetAllSql = "Select * from Room";
-            DataServer obj = new DataServer();
-            obj.ReadFromTable(GetAllSql);
+            var type = typeof(T);
+            var DelSql = new StringBuilder("DELETE FROM Room WHERE Id="); 
+
+            foreach (var prop in item.GetType().GetProperties())
+            {
+                if (prop.PropertyType.IsGenericType)
+                {
+                    Type t = item.GetType();
+
+                    var props = t.GetProperties().Where(x => x.PropertyType.IsGenericType);
+
+                    foreach (var propt in props)
+                    {
+                        var list = (IList)propt.GetValue(item);
+
+                        foreach (var value in list)
+                        {
+                            DelSql.Append(value.GetType().GetProperty("Id").GetValue(value));
+
+                        }
+                    }
+                }
+            }
+
+            DataServer dataServer = new DataServer();
+            dataServer.DatabaseGateway2(DelSql.ToString());
         }
 
         public void GetById(int id)
@@ -88,5 +131,12 @@ namespace Assignment2
             DataServer obj = new DataServer();
             obj.ReadFromTable(GetIdSq);
         }
+
+        public void GetAll()
+        {
+            var GetAllSql = "Select * from Room";
+            DataServer obj = new DataServer();
+            obj.ReadFromTable(GetAllSql);
+        }        
     }
 }
