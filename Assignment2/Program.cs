@@ -21,7 +21,7 @@ namespace Assignment2
                 Rooms = new List<Room> { room }
             };
 
-            //dataOperation.Insert(house);
+            //dataOperation.Insert(house);  //This is insert opetation
 
 
 
@@ -32,7 +32,7 @@ namespace Assignment2
                 Rooms = new List<Room> { room2 }
             };
 
-            //dataOperation.Update(house2);
+            //dataOperation.Update(house2); //this is Update operation
 
 
 
@@ -43,11 +43,11 @@ namespace Assignment2
                  Rooms = new List<Room> { room3 }
             };
 
-            //dataOperation.Delete(house3);
+            //dataOperation.Delete(house3); //This is Delete operation
 
-            //dataOperation.GetAll();
+            //dataOperation.GetAll();  // This is GetAll operation
 
-            //dataOperation.GetById(5);
+            //dataOperation.GetById(5);  //This is GetById
         }
     }
 }
