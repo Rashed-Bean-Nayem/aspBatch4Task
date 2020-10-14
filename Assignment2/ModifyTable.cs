@@ -35,6 +35,18 @@ namespace Assignment2
             int final = Convert.ToInt32(HouseId);
             return HouseId; 
         }
-       
+
+        public void DatabaseGateway2(string sql)
+        {
+            var connection = "Server=DESKTOP-4HQ3RMH\\SQLEXPRESS; Database= CRUDdb1; User=sa ; password=1110169958;";
+            var sqlConnnection = new SqlConnection(connection);
+            sqlConnnection.Open();
+            var sqlcommand = new SqlCommand(sql, sqlConnnection);
+            sqlcommand.ExecuteNonQuery();
+
+            sqlConnnection.Close();
+            sqlConnnection.Dispose();
+
+        }       
     }
 }

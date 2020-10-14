@@ -13,15 +13,12 @@ namespace Assignment2
             
            var dataOperation2 = new DataOperation<House>();
 
-            var room = new Room { Rent = 2.9 };
+            var room = new Room { Rent = 4000 };
           
-
             var house = new House
             {
-                //Id = 21,
-                Name = "HouseYou",
+                Name = "Yellow House",
                 Rooms = new List<Room> { room }
-                
             };
          
            dataOperation2.Insert(house);

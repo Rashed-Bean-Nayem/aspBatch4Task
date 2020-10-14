@@ -11,16 +11,15 @@ namespace Assignment2
     {
         public void Insert(T item)
         {
+            ModifyTable modify = new ModifyTable();
+            int Houseid=0;
             var type = typeof(T);
-
 
             var sql = new StringBuilder("INSERT INTO ").Append(type.Name).Append(" VALUES(");
             var sql2 = new StringBuilder("Select ").Append("SCOPE_IDENTITY();");
             var sql3 = new StringBuilder("INSERT INTO ").Append("Room").Append(" VALUES("); 
             
-            int i = 1;
-
-
+            
             foreach (var prop in item.GetType().GetProperties())
             {
                 var propValue = prop.GetValue(item, null);
@@ -35,7 +34,7 @@ namespace Assignment2
                     sql.Append("'").Append(propValue).Append("'");
                     
                     sql.Append(");");
-                   
+                    Houseid = modify.DatabaseGateway(sql.ToString(), sql2.ToString());
                 }
                 else if (prop.PropertyType.IsGenericType)
                 {
@@ -49,29 +48,23 @@ namespace Assignment2
 
                         foreach (var value in list)
                         {
-
-                            //Console.WriteLine(value.GetType().GetProperty("Rent").GetValue(value));
                             sql3.Append("'").Append(value.GetType().GetProperty("Rent").GetValue(value)).Append("'");
 
                             sql3.Append(",");
 
-                            //sql.Append()
-    
-
+                            sql3.Append("'").Append(Houseid).Append("'");
+                            sql3.Append(");");
                         }
                     }
-
                 }
-
             }
 
-            Console.WriteLine(sql.ToString());
-            Console.WriteLine(sql2.ToString());
-            //ModifyTable modify = new ModifyTable();
-            //int Houseid=modify.DatabaseGateway(sql.ToString(), sql2.ToString());
-
-            //Console.WriteLine("yes"+Houseid);
-
+            //Console.WriteLine(sql.ToString());
+            //Console.WriteLine(sql2.ToString());
+            //Console.WriteLine(sql3.ToString());
+           
+            modify.DatabaseGateway2(sql3.ToString());
+          
         }
     }   
 }
