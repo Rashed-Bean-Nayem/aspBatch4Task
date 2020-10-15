@@ -10,7 +10,6 @@ namespace Assignment2
     {
         static void Main(string[] args)
         {
-            
             var dataOperation = new DataOperation<House>();
 
             var room = new Room { Rent = 5500 };
@@ -24,7 +23,6 @@ namespace Assignment2
             //dataOperation.Insert(house);  //This is insert opetation
 
 
-
             var room2 = new Room { Id = 4 , Rent=5500};
 
             var house2 = new House
@@ -33,7 +31,6 @@ namespace Assignment2
             };
 
             //dataOperation.Update(house2); //this is Update operation
-
 
 
             var room3 = new Room {Id=3};
@@ -45,7 +42,7 @@ namespace Assignment2
 
             //dataOperation.Delete(house3); //This is Delete operation
 
-            //dataOperation.GetById(2);  //This is GetById
+            //dataOperation.GetById(2);  //This is GetById operation
 
             //dataOperation.GetAll();  // This is GetAll operation
         }

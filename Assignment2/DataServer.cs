@@ -12,11 +12,12 @@ namespace Assignment2
             var connection = "Server=DESKTOP-4HQ3RMH\\SQLEXPRESS; Database= CRUDdb1; User=sa ; password=1110169958;";
             var sqlConnnection = new SqlConnection(connection);
             sqlConnnection.Open();
+
             var sqlcommand = new SqlCommand(sql, sqlConnnection);
             sqlcommand.ExecuteNonQuery();
 
-            using var sqlcommand2 = new SqlCommand(sql2, sqlConnnection);
-            using var reader = sqlcommand2.ExecuteReader();
+            var sqlcommand2 = new SqlCommand(sql2, sqlConnnection);
+            var reader = sqlcommand2.ExecuteReader();
 
             int HouseId=0; 
          
