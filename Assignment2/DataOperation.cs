@@ -65,7 +65,7 @@ namespace Assignment2
         public void Update(T item)
         {
             var type = typeof(T);
-            var UpSql = new StringBuilder("UPDATE Room SET Rent = ");//12000 WHERE Country = 'Mexico'); 
+            var UpSql = new StringBuilder("UPDATE Room SET Rent = "); 
 
             foreach (var prop in item.GetType().GetProperties())
             {

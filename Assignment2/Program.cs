@@ -25,7 +25,7 @@ namespace Assignment2
 
 
 
-            var room2 = new Room { Id = 3 , Rent=6500};
+            var room2 = new Room { Id = 4 , Rent=5500};
 
             var house2 = new House
             {
@@ -45,9 +45,9 @@ namespace Assignment2
 
             //dataOperation.Delete(house3); //This is Delete operation
 
-            //dataOperation.GetAll();  // This is GetAll operation
+            //dataOperation.GetById(2);  //This is GetById
 
-            //dataOperation.GetById(5);  //This is GetById
+            //dataOperation.GetAll();  // This is GetAll operation
         }
     }
 }
