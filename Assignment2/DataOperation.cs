@@ -18,7 +18,7 @@ namespace Assignment2
 
             var sql = new StringBuilder("INSERT INTO ").Append(type.Name).Append(" VALUES(");
             var sql2 = new StringBuilder("Select ").Append("SCOPE_IDENTITY();");
-            var sql3 = new StringBuilder("INSERT INTO ").Append("Room").Append(" VALUES("); 
+           
             
             
             foreach (var prop in item.GetType().GetProperties())
@@ -49,23 +49,26 @@ namespace Assignment2
 
                         foreach (var value in list)
                         {
+                            var sql3 =  new StringBuilder("INSERT INTO ").Append("Room").Append(" VALUES("); 
+
                             sql3.Append("'").Append(value.GetType().GetProperty("Rent").GetValue(value)).Append("'");
 
                             sql3.Append(",");
 
                             sql3.Append("'").Append(Houseid).Append("'");
                             sql3.Append(");");
-                        }
+                         
+                            modify.DatabaseGateway2(sql3.ToString());
+                        }                        
                     }
                 }
-            }
-            modify.DatabaseGateway2(sql3.ToString());          
+            }                   
         }
 
         public void Update(T item)
         {
             var type = typeof(T);
-            var UpSql = new StringBuilder("UPDATE Room SET Rent = "); 
+           
 
             foreach (var prop in item.GetType().GetProperties())
             {
@@ -81,23 +84,26 @@ namespace Assignment2
 
                         foreach (var value in list)
                         {
+                            var UpSql = new StringBuilder("UPDATE Room SET Rent = ");
                             UpSql.Append(value.GetType().GetProperty("Rent").GetValue(value));
                             UpSql.Append(" Where Id = ");
-                            UpSql.Append(value.GetType().GetProperty("Id").GetValue(value));                      
+                            UpSql.Append(value.GetType().GetProperty("Id").GetValue(value));
+
+                            
+                            DataServer dataServer = new DataServer();
+                            dataServer.DatabaseGateway2(UpSql.ToString());
+
                         }
                     }
                 }
-            }
-           
-            DataServer dataServer = new DataServer();
-            dataServer.DatabaseGateway2(UpSql.ToString());
+            }          
         }
 
 
         public void Delete(T item)
         {
             var type = typeof(T);
-            var DelSql = new StringBuilder("DELETE FROM Room WHERE Id="); 
+           
 
             foreach (var prop in item.GetType().GetProperties())
             {
@@ -113,20 +119,20 @@ namespace Assignment2
 
                         foreach (var value in list)
                         {
+                            var DelSql = new StringBuilder("DELETE FROM Room WHERE Id=");
                             DelSql.Append(value.GetType().GetProperty("Id").GetValue(value));
 
+                            DataServer dataServer = new DataServer();
+                            dataServer.DatabaseGateway2(DelSql.ToString());
                         }
                     }
                 }
-            }
-
-            DataServer dataServer = new DataServer();
-            dataServer.DatabaseGateway2(DelSql.ToString());
+            }            
         }
 
         public void GetById(int id)
         {
-            var GetIdSq = new StringBuilder("Select * from Room where Id=").Append(id).ToString();
+            var GetIdSq = new StringBuilder("Select * from Room where HouseId=").Append(id).ToString();
 
             DataServer obj = new DataServer();
             obj.ReadFromTable(GetIdSq);

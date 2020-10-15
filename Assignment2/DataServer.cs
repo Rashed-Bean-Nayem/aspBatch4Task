@@ -33,7 +33,6 @@ namespace Assignment2
             sqlConnnection.Close();
             sqlConnnection.Dispose();
 
-            int final = Convert.ToInt32(HouseId);
             return HouseId; 
         }
 
