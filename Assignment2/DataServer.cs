@@ -47,14 +47,14 @@ namespace Assignment2
 
             sqlConnnection.Close();
             sqlConnnection.Dispose();
+            
         }
 
 
 
         public void ReadFromTable(string sql)
         {
-            try
-            {
+            
                 var connection = "Server=DESKTOP-4HQ3RMH\\SQLEXPRESS; Database= CRUDdb1; User=sa ; password=1110169958;";
                 using var sqlConnnection = new SqlConnection(connection);
                 sqlConnnection.Open(); 
@@ -87,11 +87,7 @@ namespace Assignment2
                     Console.WriteLine();
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("There was a problem");
-               
-            }
+           
         }
     }
-}
+

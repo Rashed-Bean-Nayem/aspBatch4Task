@@ -9,7 +9,6 @@ namespace Assignment2
 {
     public class DataOperation<T> where T : class
     {
-        
         public void Insert(T item)
         {
             DataServer modify = new DataServer();
@@ -19,7 +18,6 @@ namespace Assignment2
             var sql = new StringBuilder("INSERT INTO ").Append(type.Name).Append(" VALUES(");
             var sql2 = new StringBuilder("Select ").Append("SCOPE_IDENTITY();");
            
-            
             
             foreach (var prop in item.GetType().GetProperties())
             {

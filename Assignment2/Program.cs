@@ -12,16 +12,16 @@ namespace Assignment2
         {
             var dataOperation = new DataOperation<House>();
 
-            var room = new Room { Rent = 2900 };
-            var room8 = new Room { Rent = 8000 };
+            var room = new Room { Rent = 2200 };
+            var room8 = new Room { Rent = 1700 };
           
             var house = new House
             {
-                Name = "Yellow House",
+                Name = "Light House",
                 Rooms = new List<Room> { room, room8 }
             };
 
-            //dataOperation.Insert(house);  //This is insert opetation
+            dataOperation.Insert(house);  //This is insert opetation
 
 
             var room2 = new Room { Id = 5 , Rent=1000};
@@ -32,7 +32,7 @@ namespace Assignment2
                 Rooms = new List<Room> { room2,room9 }
             };
 
-            //dataOperation.Update(house2); //this is Update operation
+            dataOperation.Update(house2); //This is Update operation
 
 
             var room3 = new Room {Id=11};
@@ -43,11 +43,11 @@ namespace Assignment2
                  Rooms = new List<Room> { room3,room11 }
             };
 
-            //dataOperation.Delete(house3); //This is Delete operation
+            dataOperation.Delete(house3); //This is Delete operation
 
-            //dataOperation.GetById(15);  //This is GetById operation
+            dataOperation.GetById(15);  //This is GetById operation
 
-            //dataOperation.GetAll();  // This is GetAll operation
+            dataOperation.GetAll();  // This is GetAll operation
         }
     }
 }
