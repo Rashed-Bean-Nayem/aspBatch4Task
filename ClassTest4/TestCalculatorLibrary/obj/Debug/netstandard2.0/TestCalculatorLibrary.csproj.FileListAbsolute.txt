@@ -1,0 +1,9 @@
+E:\1_DevSkill\GITHUB\aspBatch4Task\ClassTest4\TestCalculatorLibrary\bin\Debug\netstandard2.0\TestCalculatorLibrary.deps.json
+E:\1_DevSkill\GITHUB\aspBatch4Task\ClassTest4\TestCalculatorLibrary\bin\Debug\netstandard2.0\TestCalculatorLibrary.dll
+E:\1_DevSkill\GITHUB\aspBatch4Task\ClassTest4\TestCalculatorLibrary\obj\Debug\netstandard2.0\TestCalculatorLibrary.csprojAssemblyReference.cache
+E:\1_DevSkill\GITHUB\aspBatch4Task\ClassTest4\TestCalculatorLibrary\obj\Debug\netstandard2.0\TestCalculatorLibrary.AssemblyInfoInputs.cache
+E:\1_DevSkill\GITHUB\aspBatch4Task\ClassTest4\TestCalculatorLibrary\obj\Debug\netstandard2.0\TestCalculatorLibrary.AssemblyInfo.cs
+E:\1_DevSkill\GITHUB\aspBatch4Task\ClassTest4\TestCalculatorLibrary\bin\Debug\netstandard2.0\TestCalculatorLibrary.pdb
+E:\1_DevSkill\GITHUB\aspBatch4Task\ClassTest4\TestCalculatorLibrary\obj\Debug\netstandard2.0\TestCalculatorLibrary.csproj.CoreCompileInputs.cache
+E:\1_DevSkill\GITHUB\aspBatch4Task\ClassTest4\TestCalculatorLibrary\obj\Debug\netstandard2.0\TestCalculatorLibrary.dll
+E:\1_DevSkill\GITHUB\aspBatch4Task\ClassTest4\TestCalculatorLibrary\obj\Debug\netstandard2.0\TestCalculatorLibrary.pdb
