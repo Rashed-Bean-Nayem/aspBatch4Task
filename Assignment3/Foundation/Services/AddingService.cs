@@ -14,7 +14,7 @@ namespace Foundation.Services
             _shopingUnitOfWork = shopingUnitOfWork;
         }
 
-        public void Add(Student student)
+        public void Add(Student student) 
         {
             _shopingUnitOfWork.StudentRepository.Add(student);
             _shopingUnitOfWork.Save();
