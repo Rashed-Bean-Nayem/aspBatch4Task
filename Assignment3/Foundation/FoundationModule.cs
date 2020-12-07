@@ -34,7 +34,7 @@ namespace Foundation
                 .InstancePerLifetimeScope();
             builder.RegisterType<ShopingUnitOfWork>().As<IShopingUnitOfWork>()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<PurchaseService>().As<IPurchaseService>()
+            builder.RegisterType<AddingService>().As<IAddingService>()
                 .InstancePerLifetimeScope();
 
             base.Load(builder);

@@ -6,15 +6,15 @@ using System.Text;
 
 namespace Foundation.Services
 {
-    public class PurchaseService : IPurchaseService
+    public class AddingService : IAddingService
     {
         private readonly IShopingUnitOfWork _shopingUnitOfWork;
-        public PurchaseService(IShopingUnitOfWork shopingUnitOfWork)
+        public AddingService(IShopingUnitOfWork shopingUnitOfWork)
         {
             _shopingUnitOfWork = shopingUnitOfWork;
         }
 
-        public void Purchase(Student student)
+        public void Add(Student student)
         {
             _shopingUnitOfWork.StudentRepository.Add(student);
             _shopingUnitOfWork.Save();

@@ -13,19 +13,19 @@ namespace WebFile.Models
         public string Name { get; set; }
 
    
-        private readonly IPurchaseService _purchaseService;
+        private readonly IAddingService _addingService;
 
 
-        public IndexModel(IPurchaseService purchaseService)
+        public IndexModel(IAddingService addingService)
         {
-           
-            _purchaseService = purchaseService;
+
+            _addingService = addingService;
         }
         public void Add()
         {
-            _purchaseService.Purchase(new Student
+            _addingService.Add(new Student
             {
-                Name = "Rashed Bean Nayem",
+                Name = "Ahmed Khan",
                 DateOfBirth = DateTime.Now
             
             });

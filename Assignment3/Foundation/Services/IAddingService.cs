@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Foundation.Services
 {
-    public interface IPurchaseService
+    public interface IAddingService
     {
-        void Purchase(Student student);
+        void Add(Student student);
     }
 }
