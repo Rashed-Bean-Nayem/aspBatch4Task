@@ -26,8 +26,22 @@ using WebFile.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\Areas\Admin\Views\_ViewImports.cshtml"
+using Foundation.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\Areas\Admin\Views\_ViewImports.cshtml"
+using WebFile.Areas.Admin.Data;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Areas/Admin/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"64f4aaa0bdde4e77474bd3228be603af64dddd67", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1acfdd273c4cbe4652d731415979e156215b2f94", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

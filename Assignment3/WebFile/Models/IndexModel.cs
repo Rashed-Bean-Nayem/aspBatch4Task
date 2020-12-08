@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebFile.Areas.Admin.Data;
 
 namespace WebFile.Models
 {
@@ -21,13 +22,25 @@ namespace WebFile.Models
 
             _addingService = addingService;
         }
-        public void Add()
+        public void AddModelStudent(StudentData studentData) 
         {
-            _addingService.Add(new Student
+            _addingService.AddStudent(new Student
             {
-                Name = "Ahmed Khan",
-                DateOfBirth = DateTime.Now
-            
+
+                Name = studentData.Name,
+                DateOfBirth = studentData.DateOfBirth
+
+            });
+        }
+        public void AddModelCourse(CourseData courseData) 
+        {
+            _addingService.AddCourse(new Course
+            {
+
+               Title=courseData.Title,
+               SeatCount=courseData.SeatCount,
+               Fee=courseData.Fee
+
             });
         }
     }

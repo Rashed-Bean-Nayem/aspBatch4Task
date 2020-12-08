@@ -7,6 +7,8 @@ namespace Foundation.Services
 {
     public interface IAddingService
     {
-        void Add(Student student);
+        void AddStudent(Student student); 
+        void AddCourse(Course course); 
+
     }
 }

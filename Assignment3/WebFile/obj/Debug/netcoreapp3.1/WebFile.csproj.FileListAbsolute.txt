@@ -1261,3 +1261,6 @@ E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\obj\Debug\netcoreapp3.1\R
 E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
+E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Student\Student.cshtml.g.cs
+E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Course\Course.cshtml.g.cs
+E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Registration\Registration.cshtml.g.cs

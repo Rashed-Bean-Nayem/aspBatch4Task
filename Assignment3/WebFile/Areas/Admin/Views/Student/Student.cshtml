@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Student";
+}
+@model StudentData;
+    <div>
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Student Form</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+
+                <form  method="post" asp-action="Student" asp-area="Admin" asp-controller="Student">
+                   
+                        <div class="form-group">
+                            <label>Student Name</label>
+                            <input asp-for="Name" class="form-control" placeholder="Student Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Date Of Birth</label>
+                            <input type="date" asp-for="DateOfBirth" class="form-control" placeholder="Date Of Birth">
+                        </div>
+
+                        <div class="form-group">                       
+                        <input type="submit" value="Add Student" class="btn btn-primary"  />
+                        </div>
+                </form>
+            </div>
+            
+        </div>
+
+    </div>

@@ -38,11 +38,18 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
+                    <a asp-area="admin" asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a asp-area="admin" asp-controller="student" asp-action="Student" class="nav-link">Student</a>
                 </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a asp-area="admin" asp-controller="course" asp-action="Course" class="nav-link">Course</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a asp-area="admin" asp-controller="Registration" asp-action="Registration" class="nav-link">Registration</a>
+                </li>
+                
             </ul>
 
             <!-- SEARCH FORM -->

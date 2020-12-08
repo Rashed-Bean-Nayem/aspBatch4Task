@@ -26,8 +26,22 @@ using WebFile.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\Areas\Admin\Views\_ViewImports.cshtml"
+using Foundation.Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "E:\1_DevSkill\GITHUB\aspBatch4Task\Assignment3\WebFile\Areas\Admin\Views\_ViewImports.cshtml"
+using WebFile.Areas.Admin.Data;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"183b7a6a02e20aff83fea6009d0668fb19c470a4", @"/Areas/Admin/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"64f4aaa0bdde4e77474bd3228be603af64dddd67", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1acfdd273c4cbe4652d731415979e156215b2f94", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("#"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -390,7 +404,7 @@ using WebFile.Models;
                     <!-- /.card-body -->
                     <div class=""card-footer"">
                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "183b7a6a02e20aff83fea6009d0668fb19c470a421983", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "183b7a6a02e20aff83fea6009d0668fb19c470a422390", async() => {
                 WriteLiteral(@"
                             <div class=""input-group"">
                                 <input type=""text"" name=""message"" placeholder=""Type Message ..."" class=""form-control"">
