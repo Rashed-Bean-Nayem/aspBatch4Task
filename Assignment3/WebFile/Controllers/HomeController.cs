@@ -21,11 +21,7 @@ namespace WebFile.Controllers
 
         public IActionResult Index()
         {
-            //var model = Startup.AutofacContainer.Resolve<IndexModel>();
-
-            //model.Add();
-
-           // return View(model);
+            
             return View();
         }
 

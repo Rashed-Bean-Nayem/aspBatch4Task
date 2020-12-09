@@ -9,6 +9,7 @@ namespace Foundation.UnitOfWorks
     public interface IShopingUnitOfWork : IUnitOfWork
     {
         IStudentRepository StudentRepository { get; set; }
-        ICourseRepository CourseRepository { get; set; } 
+        ICourseRepository CourseRepository { get; set; }
+        IRegistrationRepository RegistrationRepository { get; set; } 
     }
 }

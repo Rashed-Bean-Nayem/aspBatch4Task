@@ -11,16 +11,18 @@ namespace Foundation.UnitOfWorks
     {
         public IStudentRepository StudentRepository { get; set; }
         public ICourseRepository CourseRepository { get; set; }
+        public IRegistrationRepository RegistrationRepository { get; set; }
 
       
 
         public ShopingUnitOfWork(RegistrationContext context, 
             IStudentRepository studentRepository,
-            ICourseRepository courseRepository)
+            ICourseRepository courseRepository, IRegistrationRepository registrationRepository)
             : base(context)
         {
             StudentRepository = studentRepository;
             CourseRepository = courseRepository;
+            RegistrationRepository = registrationRepository;
         }
     }
 }

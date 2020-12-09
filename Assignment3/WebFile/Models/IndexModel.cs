@@ -43,5 +43,24 @@ namespace WebFile.Models
 
             });
         }
+
+       public void AddModelRegistration(RegistrationData registrationData) 
+        {
+            _addingService.AddRegistration(new StudentRegistration
+            {
+
+                StudentId=registrationData.StudentId,
+                CourseId=registrationData.CourseId,
+                EnrollDate=registrationData.EnrollDate,
+                IsPaymentComplete=registrationData.IsPaymentComplete
+
+            });
+        }
+
+        public IList<StudentData> GetStudentsList()
+        {
+            List<StudentData> studentDataList = new List<StudentData>();
+            return studentDataList;
+        }
     }
 }

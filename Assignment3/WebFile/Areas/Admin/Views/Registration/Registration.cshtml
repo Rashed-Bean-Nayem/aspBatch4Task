@@ -2,62 +2,66 @@
 @{
     ViewData["Title"] = "Registration";
 }
-@model 
-
+@model RegistrationData;
+@model IEnumerable<StudentData>;
 <div>
     <div class="col-md-8">
-       
+
         <div class="card card-primary">
             <div class="card-header">
                 <h3 class="card-title">Registration Form</h3>
             </div>
-           
-            <form asp-area="Admin" asp-controller="Registration" asp-action="Registration">
-               
-                    <div class="row">
-                        <div class="col-sm-6">
-                            
-                            <div class="form-group">
-                               
-                                <label>Select Student</label><br />
-                                    <select class="form-control">
 
-                                        <option value="">--Select--</option>
-                                        <option value="volvo">Volvo</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="opel">Opel</option>
-                                        <option value="audi">Audi</option>
-                                    </select>
-                                   <br><br>
-                            </div>
+            <form method="post" asp-area="Admin" asp-controller="Registration" asp-action="Registration">
+
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <div class="form-group">
+
+                            <label>Select Student</label><br />
+                            <select asp-for="StudentId" class="form-control">
+                                @foreach (var item in Model.stu)
+                                {
+                                    <option value="">--Select--</option>
+                                <option value="Volvo">Volvo</option>
+                                <option value=15>Abdur Rahman</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                                }
+
+                                
+                            </select>
+                            <br><br>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                      
-                                <label>Select Course</label><br />
-                                    <select asp-for="StudentId" class="form-control">
-                                        <option value="">--Select--</option>
-                                        <option value="volvo">Volvo</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="opel">Opel</option>
-                                        <option value="audi">Audi</option>
-                                    </select>
-                                    <br><br>
-                            </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+
+                            <label>Select Course</label><br />
+                            <select asp-for="CourseId" class="form-control">
+                                <option value="">--Select--</option>
+                                <option value="volvo">Volvo</option>
+                                <option value=2>c#</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                            <br><br>
                         </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label>Enroll Date</label>
-                        <input type="date" placeholder="EnrollDate">
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox">
-                        <label>Payment is complete</label>
-                    </div>
+                </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <label>Enroll Date</label>
+                    <input asp-for="EnrollDate" class="form-control" placeholder="EnrollDate">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" asp-for="IsPaymentComplete">
+                    <label>Payment is complete</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Add Registration" class="btn btn-primary" />
                 </div>
             </form>
         </div>
