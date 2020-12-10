@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebFile.Migrations.Registration
 {
-    public partial class Reg1 : Migration
+    public partial class MySecondMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

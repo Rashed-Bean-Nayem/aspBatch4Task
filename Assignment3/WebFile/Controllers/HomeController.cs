@@ -21,6 +21,8 @@ namespace WebFile.Controllers
 
         public IActionResult Index()
         {
+            //var model = Startup.AutofacContainer.Resolve<IndexModel>();
+            //model.DeleteAllData(studentRegistration);
             
             return View();
         }

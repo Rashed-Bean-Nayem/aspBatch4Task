@@ -27,7 +27,7 @@ namespace Foundation.Services
         public void AddRegistration(StudentRegistration studentRegistration)
         {
             _shopingUnitOfWork.RegistrationRepository.Add(studentRegistration);
-            _shopingUnitOfWork.StudentRepository.GetAll();
+
             _shopingUnitOfWork.Save();
 
         }

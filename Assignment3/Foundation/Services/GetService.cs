@@ -21,5 +21,17 @@ namespace Foundation.Services
         {
             return _shopingUnitOfWork.StudentRepository.GetAll();
         }
+        public IList<Course> GetcourseList() 
+        {
+            return _shopingUnitOfWork.CourseRepository.GetAll();
+        }
+
+        
+        public void RemoveAllData(StudentRegistration studentRegistration)
+        {
+            _shopingUnitOfWork.RegistrationRepository.Remove(studentRegistration);
+        }
+
+        
     }
 }

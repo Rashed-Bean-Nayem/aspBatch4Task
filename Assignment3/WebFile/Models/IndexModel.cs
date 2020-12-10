@@ -15,12 +15,15 @@ namespace WebFile.Models
 
    
         private readonly IAddingService _addingService;
+        private readonly IGetService _getService;
 
 
-        public IndexModel(IAddingService addingService)
+        public IndexModel(IAddingService addingService, IGetService getService)
         {
 
             _addingService = addingService;
+            _getService = getService;
+
         }
         public void AddModelStudent(StudentData studentData) 
         {
@@ -57,10 +60,16 @@ namespace WebFile.Models
             });
         }
 
-        public IList<StudentData> GetStudentsList()
+        //public IList<Student> GetModelStudentsList() 
+        //{
+             
+            
+        //    return _getService.GetstudentList(); 
+        //}
+
+        public void DeleteAllData(StudentRegistration studentRegistration)
         {
-            List<StudentData> studentDataList = new List<StudentData>();
-            return studentDataList;
+            _getService.RemoveAllData(studentRegistration);
         }
     }
 }

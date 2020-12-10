@@ -10,5 +10,6 @@ namespace Foundation.Repositories
     public interface ICourseRepository : IRepository<Course, int, RegistrationContext>
     {
         IList<Course> GetLatestCourses();
+       
     }
 }

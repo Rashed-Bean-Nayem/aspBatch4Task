@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace WebFile.Migrations.Registration
 {
     [DbContext(typeof(RegistrationContext))]
-    [Migration("20201207064605_Reg1")]
-    partial class Reg1
+    [Migration("20201210095142_MySecondMigration")]
+    partial class MySecondMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

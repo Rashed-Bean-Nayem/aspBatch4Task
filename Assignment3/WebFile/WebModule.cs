@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebFile.Areas.Admin.Data;
 using WebFile.Models;
 
 namespace WebFile
@@ -34,6 +35,8 @@ namespace WebFile
                .InstancePerLifetimeScope();
 
             builder.RegisterType<IndexModel>().AsSelf();
+            builder.RegisterType<RegistrationData>().AsSelf();
+           
             base.Load(builder);
         }
     }

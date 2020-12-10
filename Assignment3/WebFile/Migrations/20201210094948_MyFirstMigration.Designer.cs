@@ -10,8 +10,8 @@ using WebFile.Data;
 namespace WebFile.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201207064533_AP1")]
-    partial class AP1
+    [Migration("20201210094948_MyFirstMigration")]
+    partial class MyFirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

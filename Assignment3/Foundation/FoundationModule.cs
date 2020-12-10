@@ -38,6 +38,8 @@ namespace Foundation
                 .InstancePerLifetimeScope();
             builder.RegisterType<AddingService>().As<IAddingService>()
                 .InstancePerLifetimeScope();
+            builder.RegisterType<GetService>().As<IGetService>()
+               .InstancePerLifetimeScope();
 
             base.Load(builder);
         }
