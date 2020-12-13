@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Foundation.UnitOfWorks
 {
-    public class ShopingUnitOfWork : UnitOfWork, IShopingUnitOfWork
+    public class RegistrationUnitOfWork : UnitOfWork, IRegistrationUnitOfWork
     {
         public IStudentRepository StudentRepository { get; set; }
         public ICourseRepository CourseRepository { get; set; }
@@ -15,7 +15,7 @@ namespace Foundation.UnitOfWorks
 
       
 
-        public ShopingUnitOfWork(RegistrationContext context, 
+        public RegistrationUnitOfWork(RegistrationContext context, 
             IStudentRepository studentRepository,
             ICourseRepository courseRepository, IRegistrationRepository registrationRepository)
             : base(context)

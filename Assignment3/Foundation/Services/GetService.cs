@@ -8,10 +8,10 @@ namespace Foundation.Services
 {
     public class GetService : IGetService
     {
-        private readonly IShopingUnitOfWork _shopingUnitOfWork;
+        private readonly IRegistrationUnitOfWork _shopingUnitOfWork;
 
 
-        public GetService(IShopingUnitOfWork shopingUnitOfWork)
+        public GetService(IRegistrationUnitOfWork shopingUnitOfWork)
         {
             _shopingUnitOfWork = shopingUnitOfWork;
         }

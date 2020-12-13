@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Foundation.UnitOfWorks 
 {
-    public interface IShopingUnitOfWork : IUnitOfWork
+    public interface IRegistrationUnitOfWork : IUnitOfWork
     {
         IStudentRepository StudentRepository { get; set; }
         ICourseRepository CourseRepository { get; set; }

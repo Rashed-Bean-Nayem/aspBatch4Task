@@ -8,27 +8,27 @@ namespace Foundation.Services
 {
     public class AddingService : IAddingService
     {
-        private readonly IShopingUnitOfWork _shopingUnitOfWork;
-        public AddingService(IShopingUnitOfWork shopingUnitOfWork)
+        private readonly IRegistrationUnitOfWork _registrationUnitOfWork;
+        public AddingService(IRegistrationUnitOfWork registrationUnitOfWork)
         {
-            _shopingUnitOfWork = shopingUnitOfWork;
+            _registrationUnitOfWork = registrationUnitOfWork;
         }
 
         public void AddStudent(Student student)  
         {
-            _shopingUnitOfWork.StudentRepository.Add(student);
-            _shopingUnitOfWork.Save();
+            _registrationUnitOfWork.StudentRepository.Add(student);
+            _registrationUnitOfWork.Save();
         }
         public void AddCourse(Course course)  
         {
-            _shopingUnitOfWork.CourseRepository.Add(course);
-            _shopingUnitOfWork.Save();
+            _registrationUnitOfWork.CourseRepository.Add(course);
+            _registrationUnitOfWork.Save();
         }
         public void AddRegistration(StudentRegistration studentRegistration)
         {
-            _shopingUnitOfWork.RegistrationRepository.Add(studentRegistration);
+            _registrationUnitOfWork.RegistrationRepository.Add(studentRegistration);
 
-            _shopingUnitOfWork.Save();
+            _registrationUnitOfWork.Save();
 
         }
 
