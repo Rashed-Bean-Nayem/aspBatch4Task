@@ -19,7 +19,7 @@ namespace WorkerService1
 
         public FrameworkContext()
         {
-            _connectionString = "Server=DESKTOP-4HQ3RMH\\SQLEXPRESS ; Database=DSCompany5 ; User=sa; Password =1110169958;";
+            _connectionString = "Server=DESKTOP-4HQ3RMH\\SQLEXPRESS ; Database=DSCompanyDB ; User=sa; Password =1110169958;";
             _migrationAssemblyName = typeof(Program).Assembly.FullName;
         }
 

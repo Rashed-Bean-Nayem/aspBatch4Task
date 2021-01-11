@@ -1,65 +1,108 @@
-2021-01-11 13:53:08.716 +06:00 [INF] Application Starting up
-2021-01-11 13:53:11.613 +06:00 [INF] 1
-2021-01-11 13:53:11.617 +06:00 [INF] 
-												
-													1JANATAMF												
-											
-2021-01-11 13:53:11.617 +06:00 [INF] 6.6
-2021-01-11 13:53:11.617 +06:00 [INF] 7
-2021-01-11 13:53:11.617 +06:00 [INF] 6.6
-2021-01-11 13:53:11.618 +06:00 [INF] 0
-2021-01-11 13:53:11.618 +06:00 [INF] 6.8
-2021-01-11 13:53:11.618 +06:00 [INF] -0.2
-2021-01-11 13:53:11.618 +06:00 [INF] 209
-2021-01-11 13:53:11.618 +06:00 [INF] 12.623
-2021-01-11 13:53:15.720 +06:00 [INF] 1,859,526
-2021-01-11 13:53:15.720 +06:00 [INF] 2
-2021-01-11 13:53:15.720 +06:00 [INF] 
-												
-													1STPRIMFMF												
-											
-2021-01-11 13:53:15.727 +06:00 [INF] 22.1
-2021-01-11 13:53:15.727 +06:00 [INF] 23.7
-2021-01-11 13:53:15.727 +06:00 [INF] 22
-2021-01-11 13:53:15.727 +06:00 [INF] 0
-2021-01-11 13:53:15.727 +06:00 [INF] 22.7
-2021-01-11 13:53:15.727 +06:00 [INF] -0.6
-2021-01-11 13:53:15.727 +06:00 [INF] 484
-2021-01-11 13:53:15.727 +06:00 [INF] 21.52
-2021-01-11 13:53:16.719 +06:00 [FTL] Application start-up failed
-Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
- ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'company' when IDENTITY_INSERT is set to OFF.
-   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
-   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
-   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
-   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
-   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
-   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
-   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
-   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
-   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
-   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
-   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
-   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
-   at System.Data.Common.DbCommand.ExecuteReader()
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
-   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
-ClientConnectionId:f30cc891-0912-4ad3-928b-d44ebcb45662
-Error Number:544,State:1,Class:16
-   --- End of inner exception stack trace ---
-   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
-   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
-   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
-   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
-   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
-   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
-   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
-   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
-   at WorkerService1.Worker.AddCompany(DSCompany newCompany) in E:\1_DevSkill\GITHUB\AspNet-DevSkill\Worker Service\WorkerService1\Worker.cs:line 126
-   at WorkerService1.Worker.ExecuteAsync(CancellationToken stoppingToken) in E:\1_DevSkill\GITHUB\AspNet-DevSkill\Worker Service\WorkerService1\Worker.cs:line 100
-   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
-   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
-   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
-   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
-   at WorkerService1.Program.Main(String[] args) in E:\1_DevSkill\GITHUB\AspNet-DevSkill\Worker Service\WorkerService1\Program.cs:line 41
+2021-01-11 16:07:47.477 +06:00 [INF] Application Starting up
+2021-01-11 16:08:01.591 +06:00 [INF] Worker Ending at: 1/11/2021 4:08:01 PM +06:00
+2021-01-11 16:08:35.730 +06:00 [INF] Application Starting up
+2021-01-11 16:08:41.014 +06:00 [INF] Worker Ending at: 1/11/2021 4:08:41 PM +06:00
+2021-01-11 16:08:43.371 +06:00 [INF] Worker Ending at: 1/11/2021 4:08:43 PM +06:00
+2021-01-11 16:08:45.894 +06:00 [INF] Worker Ending at: 1/11/2021 4:08:45 PM +06:00
+2021-01-11 16:08:48.312 +06:00 [INF] Worker Ending at: 1/11/2021 4:08:48 PM +06:00
+2021-01-11 16:08:50.595 +06:00 [INF] Worker Ending at: 1/11/2021 4:08:50 PM +06:00
+2021-01-11 16:08:53.023 +06:00 [INF] Worker Ending at: 1/11/2021 4:08:53 PM +06:00
+2021-01-11 16:08:55.640 +06:00 [INF] Worker Ending at: 1/11/2021 4:08:55 PM +06:00
+2021-01-11 16:08:58.230 +06:00 [INF] Worker Ending at: 1/11/2021 4:08:58 PM +06:00
+2021-01-11 16:09:00.759 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:00 PM +06:00
+2021-01-11 16:09:03.082 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:03 PM +06:00
+2021-01-11 16:09:05.888 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:05 PM +06:00
+2021-01-11 16:09:08.621 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:08 PM +06:00
+2021-01-11 16:09:11.189 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:11 PM +06:00
+2021-01-11 16:09:13.504 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:13 PM +06:00
+2021-01-11 16:09:16.117 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:16 PM +06:00
+2021-01-11 16:09:18.616 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:18 PM +06:00
+2021-01-11 16:09:21.042 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:21 PM +06:00
+2021-01-11 16:09:23.449 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:23 PM +06:00
+2021-01-11 16:09:25.854 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:25 PM +06:00
+2021-01-11 16:09:28.212 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:28 PM +06:00
+2021-01-11 16:09:30.654 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:30 PM +06:00
+2021-01-11 16:09:32.990 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:32 PM +06:00
+2021-01-11 16:09:35.524 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:35 PM +06:00
+2021-01-11 16:09:37.954 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:37 PM +06:00
+2021-01-11 16:09:40.698 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:40 PM +06:00
+2021-01-11 16:09:43.094 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:43 PM +06:00
+2021-01-11 16:09:45.292 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:45 PM +06:00
+2021-01-11 16:09:47.848 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:47 PM +06:00
+2021-01-11 16:09:50.597 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:50 PM +06:00
+2021-01-11 16:09:53.014 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:53 PM +06:00
+2021-01-11 16:09:55.464 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:55 PM +06:00
+2021-01-11 16:09:57.942 +06:00 [INF] Worker Ending at: 1/11/2021 4:09:57 PM +06:00
+2021-01-11 16:10:00.359 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:00 PM +06:00
+2021-01-11 16:10:03.184 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:03 PM +06:00
+2021-01-11 16:10:05.654 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:05 PM +06:00
+2021-01-11 16:10:08.036 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:08 PM +06:00
+2021-01-11 16:10:10.646 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:10 PM +06:00
+2021-01-11 16:10:14.188 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:14 PM +06:00
+2021-01-11 16:10:16.684 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:16 PM +06:00
+2021-01-11 16:10:20.737 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:20 PM +06:00
+2021-01-11 16:10:23.332 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:23 PM +06:00
+2021-01-11 16:10:26.023 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:26 PM +06:00
+2021-01-11 16:10:28.455 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:28 PM +06:00
+2021-01-11 16:10:31.438 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:31 PM +06:00
+2021-01-11 16:10:39.465 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:39 PM +06:00
+2021-01-11 16:10:41.758 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:41 PM +06:00
+2021-01-11 16:10:45.543 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:45 PM +06:00
+2021-01-11 16:10:48.960 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:48 PM +06:00
+2021-01-11 16:10:51.320 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:51 PM +06:00
+2021-01-11 16:10:54.425 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:54 PM +06:00
+2021-01-11 16:10:58.124 +06:00 [INF] Worker Ending at: 1/11/2021 4:10:58 PM +06:00
+2021-01-11 16:11:02.200 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:02 PM +06:00
+2021-01-11 16:11:04.476 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:04 PM +06:00
+2021-01-11 16:11:07.521 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:07 PM +06:00
+2021-01-11 16:11:10.176 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:10 PM +06:00
+2021-01-11 16:11:13.750 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:13 PM +06:00
+2021-01-11 16:11:19.001 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:19 PM +06:00
+2021-01-11 16:11:22.539 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:22 PM +06:00
+2021-01-11 16:11:26.662 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:26 PM +06:00
+2021-01-11 16:11:30.385 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:30 PM +06:00
+2021-01-11 16:11:35.309 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:35 PM +06:00
+2021-01-11 16:11:38.593 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:38 PM +06:00
+2021-01-11 16:11:41.042 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:41 PM +06:00
+2021-01-11 16:11:44.556 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:44 PM +06:00
+2021-01-11 16:11:47.963 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:47 PM +06:00
+2021-01-11 16:11:50.809 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:50 PM +06:00
+2021-01-11 16:11:53.968 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:53 PM +06:00
+2021-01-11 16:11:56.354 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:56 PM +06:00
+2021-01-11 16:11:58.961 +06:00 [INF] Worker Ending at: 1/11/2021 4:11:58 PM +06:00
+2021-01-11 16:12:02.109 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:02 PM +06:00
+2021-01-11 16:12:04.381 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:04 PM +06:00
+2021-01-11 16:12:06.632 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:06 PM +06:00
+2021-01-11 16:12:10.157 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:10 PM +06:00
+2021-01-11 16:12:12.399 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:12 PM +06:00
+2021-01-11 16:12:15.794 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:15 PM +06:00
+2021-01-11 16:12:18.295 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:18 PM +06:00
+2021-01-11 16:12:20.724 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:20 PM +06:00
+2021-01-11 16:12:24.009 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:24 PM +06:00
+2021-01-11 16:12:27.397 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:27 PM +06:00
+2021-01-11 16:12:29.847 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:29 PM +06:00
+2021-01-11 16:12:33.483 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:33 PM +06:00
+2021-01-11 16:12:36.909 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:36 PM +06:00
+2021-01-11 16:12:39.166 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:39 PM +06:00
+2021-01-11 16:12:42.661 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:42 PM +06:00
+2021-01-11 16:12:45.979 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:45 PM +06:00
+2021-01-11 16:12:49.283 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:49 PM +06:00
+2021-01-11 16:12:51.693 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:51 PM +06:00
+2021-01-11 16:12:54.035 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:54 PM +06:00
+2021-01-11 16:12:56.304 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:56 PM +06:00
+2021-01-11 16:12:58.413 +06:00 [INF] Worker Ending at: 1/11/2021 4:12:58 PM +06:00
+2021-01-11 16:13:00.573 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:00 PM +06:00
+2021-01-11 16:13:02.658 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:02 PM +06:00
+2021-01-11 16:13:04.730 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:04 PM +06:00
+2021-01-11 16:13:06.886 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:06 PM +06:00
+2021-01-11 16:13:09.130 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:09 PM +06:00
+2021-01-11 16:13:11.181 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:11 PM +06:00
+2021-01-11 16:13:13.421 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:13 PM +06:00
+2021-01-11 16:13:15.693 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:15 PM +06:00
+2021-01-11 16:13:17.791 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:17 PM +06:00
+2021-01-11 16:13:20.157 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:20 PM +06:00
+2021-01-11 16:13:22.155 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:22 PM +06:00
+2021-01-11 16:13:24.217 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:24 PM +06:00
+2021-01-11 16:13:26.308 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:26 PM +06:00
+2021-01-11 16:13:28.465 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:28 PM +06:00
+2021-01-11 16:13:31.036 +06:00 [INF] Worker Ending at: 1/11/2021 4:13:31 PM +06:00

@@ -29,9 +29,7 @@ namespace WorkerService1
             {
                
                 var doc = GetHtmlDocument(_url);
-                //var table = doc.DocumentNode.Descendants("table")
-                //    .Select(x => x.Descendants()).ToList();
-                //var table = doc.DocumentNode.SelectNodes("//table//tbody//td")/*.Where(x => x.InnerText)*/;
+          
                 var table = doc.DocumentNode.SelectNodes("//table[@class='table table-bordered background-white shares-table fixedHeader']//td")/*.Where(x => x.InnerText)*/;
 
                 int count = 1;
@@ -94,35 +92,29 @@ namespace WorkerService1
                     else if (count == 11)
                     {
                         newCompany.Volume = item.InnerText;
-                       
+
                         if (count == 11)
                         {
                             AddCompany(newCompany);
                             count = 1;
-                            //newCompany = null;
+                            newCompany = new DSCompany();
                         }
                     }
 
-                  _logger.LogInformation(item.InnerText);
+                  //_logger.LogInformation(item.InnerText);
 
                 }
-                _logger.LogInformation($"Worker running at: {DateTimeOffset.Now}");
+                _logger.LogInformation($"Worker Ending at: {DateTimeOffset.Now}");
 
-                await Task.Delay(55000, stoppingToken);
+                await Task.Delay(1000, stoppingToken);
             }
         }
         public void AddCompany(DSCompany newCompany)
         {
-            var connectionString = "Server=DESKTOP-4HQ3RMH\\SQLEXPRESS ; Database=DSCompany5 ; User=sa; Password =1110169958;";
-            var migrationAssemblyName = typeof(Program).Assembly.FullName;
-            var context = new FrameworkContext(connectionString, migrationAssemblyName);
+           
+            var context = new FrameworkContext();
 
             context.company.Add(newCompany);
-
-            //context.SaveChanges();
-            //context.AddRange();
-            //context.DisposeAsync();
-
             context.SaveChanges();
             context.Dispose();
         }
