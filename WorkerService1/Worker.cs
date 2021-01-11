@@ -101,12 +101,12 @@ namespace WorkerService1
                         }
                     }
 
-                  //_logger.LogInformation(item.InnerText);
+                 
 
                 }
                 _logger.LogInformation($"Worker Ending at: {DateTimeOffset.Now}");
 
-                await Task.Delay(1000, stoppingToken);
+                await Task.Delay(55000, stoppingToken);
             }
         }
         public void AddCompany(DSCompany newCompany)

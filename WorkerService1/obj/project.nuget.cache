@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rNx4fYmnG0/+ZjZwF+MCjLD9/4ZGwRyGZZzLy2gqnO2F6aMKxt2Cb+/2Qzb3lG3GvRytM2lwQYxfNASD16Pomg==",
+  "dgSpecHash": "fQ9Jo153RROOROpPOxfij+praajdu9q24fWXIwRITnlUbcTHZb2JHoi+6ongzJUy9g3++ex5bF7wcYOt4ij/4A==",
   "success": true,
-  "projectFilePath": "E:\\1_DevSkill\\GITHUB\\AspNet-DevSkill\\Worker Service\\WorkerService1\\WorkerService1.csproj",
+  "projectFilePath": "E:\\1_DevSkill\\GITHUB\\aspBatch4Task\\WorkerService1\\WorkerService1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DCL\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\DCL\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",

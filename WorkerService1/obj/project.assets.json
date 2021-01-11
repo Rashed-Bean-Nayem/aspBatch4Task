@@ -7258,11 +7258,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\1_DevSkill\\GITHUB\\AspNet-DevSkill\\Worker Service\\WorkerService1\\WorkerService1.csproj",
+      "projectUniqueName": "E:\\1_DevSkill\\GITHUB\\aspBatch4Task\\WorkerService1\\WorkerService1.csproj",
       "projectName": "WorkerService1",
-      "projectPath": "E:\\1_DevSkill\\GITHUB\\AspNet-DevSkill\\Worker Service\\WorkerService1\\WorkerService1.csproj",
+      "projectPath": "E:\\1_DevSkill\\GITHUB\\aspBatch4Task\\WorkerService1\\WorkerService1.csproj",
       "packagesPath": "C:\\Users\\DCL\\.nuget\\packages\\",
-      "outputPath": "E:\\1_DevSkill\\GITHUB\\AspNet-DevSkill\\Worker Service\\WorkerService1\\obj\\",
+      "outputPath": "E:\\1_DevSkill\\GITHUB\\aspBatch4Task\\WorkerService1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
